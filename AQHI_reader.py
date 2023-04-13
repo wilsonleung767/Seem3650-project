@@ -12,5 +12,6 @@ def AQHI_reader(csv_file):
     # Remove the time component from the Date column
     df['Date'] = df['Date'].dt.strftime('%Y-%m-%d')
     df.to_excel(f'csv_to_excel/{csv_file_date}_AQHI.xlsx', index=False)
+    print('Excel file generated')
 
 AQHI_reader('data/202201_Eng.csv')
