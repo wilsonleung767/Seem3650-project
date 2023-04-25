@@ -23,9 +23,9 @@ def AQHI_reader(csv_file):
     df.to_excel(f'csv_to_excel/AQHI_excel/{csv_file_date}_AQHI.xlsx', index=False)
     print('Excel file generated')
 
-csv_files = [f for f in os.listdir('data/AQHI_csv') if f.endswith('.csv')]
+csv_files = [f for f in os.listdir('data/') if f.endswith('.csv')]
 
 # AQHI_reader('data\AQHI_csv/202001_Eng.csv')
 # loop through each CSV file and call the AQHI_reader function
 for csv_file in csv_files:
-    AQHI_reader(f"data/AQHI_csv/{csv_file}")
+    AQHI_reader(f"data/{csv_file}")
