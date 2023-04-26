@@ -13,8 +13,25 @@ def humidity_reader(file):
     # Rename the columns to English names
     df.columns = ['Year', 'Month', 'Day', 'Value', 'Data Completeness']
     
-    # Drop all data before 2015
-    df = df[df['Year'] >= 2015]
+    # Drop all data before 2020
+    df = df[df['Year'] >= 2020 ]
+    df['Value'] = pd.to_numeric(df['Value'], errors='coerce')
+
+    # Calculate the monthly average of the 'Value' column
+    monthly_avg = df.groupby(['Year', 'Month'])['Value'].mean().reset_index()
+    monthly_avg = monthly_avg.sort_values(['Year', 'Month'])
+    print(monthly_avg)
+    # Write the monthly average to a new Excel file starting from cell B2
+    with pd.ExcelWriter('csv_to_excel/copydata.xlsx') as writer:
+        monthly_avg.to_excel(writer, sheet_name='Sheet1', startrow=1, startcol=1, index=False)
+
+    # Merge the monthly average with the original DataFrame
+    df = pd.merge(df, monthly_avg, on=['Year', 'Month'])
+    
+    # Rename the new column to 'Monthly Avg'
+    df.rename(columns={'Value_y': 'Monthly Avg'}, inplace=True)
+
+
     # Reset the index and drop the original index column
     df = df.reset_index(drop=True)
 
@@ -37,5 +54,5 @@ def process_files_in_folder(folder_path):
         humidity_reader(file_path)
     print("Completed")
 
-# humidity_reader('data\Humidity\daily_CCH_RH_ALL.csv')
-process_files_in_folder('data/Humidity')
+humidity_reader('data\Humidity\daily_KP_RH_ALL.csv')
+# process_files_in_folder('data/Humidity')
