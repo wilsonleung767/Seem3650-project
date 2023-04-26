@@ -7,6 +7,6 @@ Fetch data
 in cmd "git pull" 
 
 Update and post data
-in cmd "git add ."
-"git commit"
-"git push"
+1. in cmd "git add ."
+2. "git commit"
+3. "git push"
