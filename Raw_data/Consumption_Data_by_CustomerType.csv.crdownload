@@ -1,0 +1,13 @@
+﻿Year 年,Period 時期,Breakdown By Customer Type (Period / Year) 客戶分類 (時期/年),Consumption (GWh) 用電量 (百萬度),Number of Customers (‘000) 客戶總數 (千位),Average Consumption (kWh) 平均用電量 (度)
+2022,First Half 上半年,Residential 住宅用戶,1038,470,2209
+2022,First Half 上半年,Commercial 商業用戶,3152,109,28992
+2022,First Half 上半年,Industrial 工業用戶,130,5,25361
+2022,First Half 上半年,Overall 總計,4320,584,7398
+2021,Second Half 下半年,Residential 住宅用戶,1516,471,3222
+2021,Second Half 下半年,Commercial 商業用戶,4035,108,37320
+2021,Second Half 下半年,Industrial 工業用戶,158,5,30741
+2021,Second Half 下半年,Overall 總計,5709,584,9780
+2021,First Half 上半年,Residential 住宅用戶,1136,470,2418
+2021,First Half 上半年,Commercial 商業用戶,3372,109,30932
+2021,First Half 上半年,Industrial 工業用戶,134,5,26069
+2021,First Half 上半年,Overall 總計,4642,584,7948
