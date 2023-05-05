@@ -16,4 +16,4 @@ def AQD_reader(csv_file):
     df.to_excel(f'csv_to_excel/air_data.xlsx', index=False)
     print('Excel file generated')
 
-AQD_reader('data/2018-2022_air_monthly.csv')
+AQD_reader('Raw_data/2018-2022_air_monthly.csv')

@@ -39,7 +39,7 @@ def windspeed_reader(file):
     df = df.reset_index(drop=True)
 
     # Save the DataFrame to an Excel file named after the place
-    filename = f'csv_to_excel/WindSpeed_excel/{place_name}_humidity.xlsx'
+    filename = f'csv_to_excel/WindSpeed_excel/{place_name}_WindSpeed.xlsx'
     df.to_excel(filename)
 
 def process_files_in_folder(folder_path):

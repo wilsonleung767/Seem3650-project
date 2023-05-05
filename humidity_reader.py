@@ -54,5 +54,5 @@ def process_files_in_folder(folder_path):
         humidity_reader(file_path)
     print("Completed")
 
-humidity_reader('data\Humidity\daily_KP_RH_ALL.csv')
+humidity_reader('Raw_data\Humidity\daily_KP_RH_ALL.csv')
 # process_files_in_folder('data/Humidity')
